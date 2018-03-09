@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Repository</title>
+	<!-- <link rel="stylesheet" href="css/custom.css"> -->
+
+	<style>
+		#mybtn{
+			position: fixed;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<video autoplay muted loop id="myvideo">
+			<source src="video/rain.mp4" type='video/mp4'>
+		</video>
+		<button onclick='mybtn()' id="mybtn">Pause</button>
+	</div>
+	<script type='text/javascript' src='js/jquery-1.12.0.min.js'></script>
+	<script type='text/javascript'>
+		// $(document).ready(function(){
+		// })
+		var video = document.getElementById('myvideo');
+		var btn = document.getElementById('mybtn');
+
+		function mybtn(){
+			if(video.paused){
+				video.play();
+				btn.innerHTML = "Pause";
+			}
+			else
+			{
+				video.pause();
+				btn.innerHTML = "Play";
+			}
+		}
+	</script>
+</body>
+</html>
